@@ -1,18 +1,27 @@
 import React from 'react';
-import './App.css';
 import Header from './components/Header';
 import TransactionTable from './components/TransactionTable';
 import SearchBar from './components/SearchBar';
+import TransactionForm from './components/TransactionForm';
+import './App.css';
+
 function App() {
+  const array =[
+  {
+    date: " 2024-12-23",
+    description: "lorem",
+    category: "lorem",
+    Amount: "200",
+  },
+]
+
   return (
     <div>
-      <Header />
+      <Header/>
       <SearchBar/>
-      <TransactionTable />
-      
+      <TransactionForm/>
+      <TransactionTable/>
     </div>
-
-
   )
 }
 

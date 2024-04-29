@@ -1,20 +1,21 @@
-import { useState } from "react";
-function TransactionForm(){
-    const [description, setDescription] = useState("");
-    date : "",
-    description: "",
-    category:"",
-    amount: "",
-});
+function TransactionForm() {
+    return (
+        <div className="row border">
+            <div className="col-3">
+                <input type="date" />
+            </div>
+            <div className="col-3">
+                <input type="text" placeholder="Description" />
+            </div>
+            <div className="col-3">
+                <input type="text" placeholder="Category"/>
+            </div>
+            <div className="col-3">
+                <input type="text" placeholder="Amount" />
+            </div>
 
-function handleSubmit(e){
-    e.preventDefault();
-    setTransactions([...transactions, description]);
+        </div>
+    )
 }
-function handleChange(e){
-    setDescription(e.target.value);
-}
-  
-  
-}
-export default TransactionForm
+
+export default TransactionForm;

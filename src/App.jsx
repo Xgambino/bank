@@ -18,6 +18,18 @@ function App() {
       category: "lorem", // String: Description of the transaction
       amount: "200", // String: Amount of the transaction
     },
+    {
+      date: "2023-12-23", // String: Date of the transaction
+      description: "lorem", // String: Description of the transaction
+      category: "lorem", // String: Description of the transaction
+      amount: "9000", // String: Amount of the transaction
+    },
+    {
+      date: "2022-12-23", // String: Date of the transaction
+      description: "lorem", // String: Description of the transaction
+      category: "lorem", // String: Description of the transaction
+      amount: "1800", // String: Amount of the transaction
+    },
   ]);
 
   // Return JSX to render the component

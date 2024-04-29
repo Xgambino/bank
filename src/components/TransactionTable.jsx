@@ -12,8 +12,10 @@ function TransactionTable({ transactions }) {
                     <th scope="col">Category</th>
                     <th scope="col">Amount</th>
                 </tr>
+                <button type="submit" class="btn btn-primary center" >Add Transaction</button>
             </thead>
             <tbody><Table transactions={transactions} /></tbody>
+            
         </table>
     );
 }

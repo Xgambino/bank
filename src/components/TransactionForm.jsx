@@ -1,5 +1,9 @@
+
+import React from 'react';
+
 function TransactionForm() {
     return (
+        
         <div className="row border">
             <div className="col-3">
                 <input type="date" />
@@ -13,9 +17,8 @@ function TransactionForm() {
             <div className="col-3">
                 <input type="text" placeholder="Amount" />
             </div>
-
         </div>
-    )
+    );
 }
 
 export default TransactionForm;

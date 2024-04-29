@@ -1,7 +1,10 @@
+
+import React from 'react';
+
 function Header() {
     return (
         <div>
-            <h1>The Royal Bank of Flatiron</h1>
+            <h1 >The Royal Bank of Flatiron</h1>
         </div>
     );
 }

@@ -13,10 +13,10 @@ function App() {
   // Initialize state for transactions
   const [transactions, setTransactions] = useState([
     {
-      date: "2024-12-23",
-      description: "lorem",
-      category: "lorem",
-      amount: "200",
+      date: "2024-12-23", // String: Date of the transaction
+      description: "lorem", // String: Description of the transaction
+      category: "lorem", // String: Description of the transaction
+      amount: "200", // String: Amount of the transaction
     },
   ]);
 

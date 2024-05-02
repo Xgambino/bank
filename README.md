@@ -37,13 +37,14 @@ Git
 Git clone git@github.com:Xgambino/bank.git
 
 ```
-#### Deployed link
+# Deployed link
 https://bank-howtveafx-mugambis-projects.vercel.app
 
 # Live Link
 https://github.com/Xgambino/bank.git
 
 ## Technologies used
+Vercel
 Github
 Javascript
 React

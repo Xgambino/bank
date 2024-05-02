@@ -1,17 +1,17 @@
 // Import necessary dependencies
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // Import custom components
-import Header from './components/Header';
-import TransactionTable from './components/TransactionTable';
-import SearchBar from './components/SearchBar';
-import TransactionForm from './components/TransactionForm';
-import './App.css';
+import Header from "./components/Header";
+import TransactionTable from "./components/TransactionTable";
+import SearchBar from "./components/SearchBar";
+import TransactionForm from "./components/TransactionForm";
+import "./App.css";
 
 // Define the App component
 function App() {
   // Initialize state for transactions
-  const [transactions, setTransactions] = useState([
+  const [onAddTransaction, setOnAddTransaction] = useState([
     {
       date: "2024-12-23", // String: Date of the transaction
       description: "Far Cry 5", // String: Description of the transaction
@@ -37,12 +37,21 @@ function App() {
     <div>
       {/* Render the Header component */}
       <Header />
-       {/* Render the SearchBar component */}
-      <SearchBar transactions={transactions} setTransactions={setTransactions} />
+      {/* Render the SearchBar component */}
+      <SearchBar
+         onAddTransaction={onAddTransaction}
+         setOnAddTransaction={setOnAddTransaction}
+      />
       {/* Render the TransactionForm component */}
-      <TransactionForm transactions={transactions} setTransactions={setTransactions} />
+      <TransactionForm
+        onAddTransaction={onAddTransaction}
+      setOnAddTransaction={setOnAddTransaction}
+      />
       {/* Render the TransactionTable component, passing transactions as a prop */}
-      <TransactionTable transactions={transactions} setTransactions={setTransactions} />
+      <TransactionTable
+        onAddTransaction={onAddTransaction}
+        setOnAddTransaction={setOnAddTransaction}
+      />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 // Import necessary dependencies
 import React from 'react';
 import Table from "./Table";
+
+
 // Define the TransactionTable component
 function TransactionTable({ transactions }) {
     // Return JSX to render the component

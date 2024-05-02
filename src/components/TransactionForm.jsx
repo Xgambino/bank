@@ -1,31 +1,53 @@
-// Import necessary dependencies
-import React from 'react';
-// Define the TransactionForm component
-function TransactionForm() {
-    // Return JSX to render the component
+import React, { useState } from 'react';
+
+
+function TransactionForm({ onAddTransaction }) {
+    const [formData, setFormData] = useState({
+        date: '',
+        description: '',
+        category: '',
+        amount: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Pass the form data to the parent component for handling
+        onAddTransaction(formData);
+        // Clear the form fields after submission
+        setFormData({
+            date: '',
+            description: '',
+            category: '',
+            amount: ''
+        });
+    };
+
     return (
-        // Render a div with a class of "row border"
-        <div className="row border"  style={{ padding: '20px', backgroundColor: '#f9f9f9' }}>
-            <div className="col-3" style={{ padding: '10px' }}>
-            {/* // Render an input element with a type of "date" */}
-                <input type="date" placeholder="Date" />
+        <form onSubmit={handleSubmit} className="row border" style={{ padding: '20px', backgroundColor: '#f9f9f9', display: 'flex', alignItems: 'center' }}>
+            <div className="col" style={{ padding: '10px' }}>
+                <input type="date" name="date" placeholder="Date" value={formData.date} onChange={handleChange} />
             </div>
-            <div className="col-3" style={{ padding: '10px' }}>
-                {/* // Render an input element with a type of "text" and a placeholder of "Description" */}
-                <input type="text" placeholder="Description" />
+            <div className="col" style={{ padding: '10px' }}>
+                <input type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange} />
             </div>
-            <div className="col-3" style={{ padding: '10px' }}>
-            {/* // Render an input element with a type of "text" and a placeholder of "Category" */}
-                <input type="text" placeholder="Category"/>
+            <div className="col" style={{ padding: '10px' }}>
+                <input type="text" name="category" placeholder="Category" value={formData.category} onChange={handleChange} />
             </div>
-            <div className="col-3"style={{ padding: '10px' }}>
-            {/* // Render an input element with a type of "text" and a placeholder of "Amount" */}
-                <input type="text" placeholder="Amount" />
+            <div className="col" style={{ padding: '10px' }}>
+                <input type="text" name="amount" placeholder="Amount" value={formData.amount} onChange={handleChange} />
             </div>
-            {/* Render a button element with a type of "submit" and a class of "btn btn-primary center" */}
-            <button type="submit" class="btn btn-primary center" style={{ marginLeft: '20px', padding: '5px 5px', fontSize: '16px' }}>Add Transaction</button>
-        </div>
+            <button type="submit" className="btn btn-primary center" style={{ padding: '5px 5px', fontSize: '16px' }}>Add Transaction</button>
+        </form>
+        
     );
 }
-// Export the TransactionForm component
+
 export default TransactionForm;
